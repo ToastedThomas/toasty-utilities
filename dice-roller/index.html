@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dice Roller - Toasty Utilities</title>
+
+  <meta
+    name="description"
+    content="Roll virtual dice with customizable sides easily with Toasty Utilities."
+  >
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  
+  <header>
+    <h1>Toasty Utilities</h1>
+
+    <nav>
+      <a href="../">Home</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Dice Roller</h2>
+
+      <p>Roll virtual dice with customizable sides.</p>
+    </section>
+
+    <section>
+
+      <div class="converter">
+
+        <div class="converter-input">
+          <label for="dice-count">Number of Dice</label>
+          <input type="number" id="dice-count" min="1" max="100" value="1">
+        </div>
+
+        <div class="converter-input">
+          <label for="dice-sides">Number of Sides</label>
+          <input type="number" id="dice-sides" min="2" max="1000" value="6">
+        </div>
+
+        <button id="generate-button">Roll Dice</button>
+
+        <div class="converter-result">
+          <p>Results:</p>
+          <output class="result" id="results">--</output>
+
+          <p>Total:</p>
+          <output class="result" id="total">--</output>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Toasty Utilities</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

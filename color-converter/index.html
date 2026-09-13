@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Color Converter - Toasty Utilities</title>
+
+  <meta
+    name="description"
+    content="Convert color codes between HEX and RGB easily with Toasty Utilities."
+  >
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  
+  <header>
+    <h1>Toasty Utilities</h1>
+
+    <nav>
+      <a href="../">Home</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Color Converter</h2>
+
+      <p>Convert colors between HEX and RGB formats.</p>
+    </section>
+
+    <section>
+      <h2>HEX to RGB</h2>
+
+      <div class="converter">
+
+        <div class="converter-input">
+          <label for="hex-input">HEX Color</label>
+          <input type="text" id="hex-input" placeholder="#FF5C5C">
+        </div>
+
+        <div class="converter-result">
+          <p>Result:</p>
+          <output class="result" id="hex-result">--</output>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section>
+      <h2>RGB to HEX</h2>
+
+      <div class="converter">
+
+        <div class="converter-input">
+          <label for="rgb-input">RGB color</label>
+          <input type="text" id="rgb-input" placeholder="255, 92, 92">
+        </div>
+
+        <div class="converter-result">
+          <p>Result:</p>
+          <output class="result" id="rgb-result">--</output>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Toasty Utilities</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

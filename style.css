@@ -1,0 +1,252 @@
+:root {
+  /* Accent Colors */
+  --coral: #FF5C5C;
+  --clay: #FFB65C;
+  --yellow: #FAFF70;
+  --mint: #88FF70;
+  --aqua: #70F3FF;
+  --horizon: #70A7FF;
+  --periwinkle: #9785FF;
+  --violet: #FF99FF;
+
+  /* Dark Neutrals */
+  --dark-onyx: #0A0A0A;
+  --onyx: #141414;
+  --carbon-black: #1F1F1F;
+  --graphite: #292929;
+  --iron-grey: #474747;
+  --charcoal: #525252;
+
+  /* Light / Text */
+  --ivory: #FFFFEB;
+  --text-muted: #A3A3A3;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark-onyx);
+  color: var(--ivory);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--graphite);
+}
+
+header h1 {
+  margin: 0;
+  color: var(--coral);
+  font-size: 2rem;
+}
+
+nav a {
+  color: var(--ivory);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+nav a:hover {
+  color: var(--coral);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+section:first-child {
+  padding: 2rem 0;
+}
+section:first-child h2 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+section:first-child p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.tool-card {
+  display: block;
+  padding: 20px;
+
+  background-color: var(--onyx);
+  border: 1px solid var(--graphite);
+  border-radius: 8px;
+
+  color: var(--ivory);
+  text-decoration: none;
+
+  transition: border-color 0.2s ease;
+}
+.tool-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+
+  transition: color 0.2s ease;
+}
+.tool-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.tool-card--mint:hover {
+  border-color: var(--mint);
+}
+.tool-card--mint:hover h3 {
+  color: var(--mint)
+}
+
+.tool-card--aqua:hover {
+  border-color: var(--aqua);
+}
+.tool-card--aqua:hover h3 {
+  color: var(--aqua);
+}
+
+.tool-card--periwinkle:hover {
+  border-color: var(--periwinkle);
+}
+.tool-card--periwinkle:hover h3 {
+  color: var(--periwinkle);
+}
+
+.tool-card--violet:hover {
+  border-color: var(--violet);
+}
+.tool-card--violet:hover h3 {
+  color: var(--violet);
+}
+
+.tool-card--coral:hover {
+  border-color: var(--coral);
+}
+.tool-card--coral:hover h3 {
+  color: var(--coral);
+}
+
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+@media (max-width: 800px) {
+  .tool-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 30px 16px;
+  }
+}
+
+
+.converter {
+  max-width: 700px;
+  padding: 24px;
+
+  background-color: var(--onyx);
+  border: 1px solid var(--graphite);
+  border-radius: 8px;
+}
+.converter-input {
+  margin-bottom: 20px;
+}
+.converter-input label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--ivory);
+  font-weight: bold;
+}
+
+.converter-input input,
+.converter-input select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  background-color: var(--carbon-black);
+  border: 1px solid var(--graphite);
+  border-radius: 6px;
+
+  color: var(--ivory);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+.converter-input input:focus,
+.converter-input select:focus {
+  outline: none;
+  border-color: var(--aqua);
+}
+
+#generate-button {
+  padding: 10px 16px;
+
+  background-color: var(--aqua);
+  border: none;
+  border-radius: 6px;
+
+  color: var(--dark-onyx);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+#generate-button:hover {
+  background-color: var(--mint);
+}
+
+.converter-result {
+  margin-top: 24px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--graphite);
+}
+.converter-result p {
+  margin: 0 0 8px;
+
+  color: var(--text-muted);
+}
+
+#result, .result {
+  color: var(--aqua);
+  font-family: "0xProto", monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+}
+#generator-result p {
+  font-family: "0xProto", monospace;
+  font-size: 1.5rem;
+  color: var(--ivory);
+}

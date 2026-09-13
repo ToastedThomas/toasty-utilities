@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Unit Converter - Toasty Utilities</title>
+
+  <meta
+    name="description"
+    content="Convert between common units of length quickly and easily with Toasty Utilities."
+  >
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  
+  <header>
+    <h1>Toasty Utilities</h1>
+
+    <nav>
+      <a href="../">Home</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Unit Converter</h2>
+      <p>Convert between common units of measurement.</p>
+    </section>
+
+    <section>
+      <h2>Length Converter</h2>
+
+      <div class="converter">
+
+        <div class="converter-input">
+          <label for="from-value">Value</label>
+          <input type="number" id="from-value" placeholder="Enter a value">
+        </div>
+
+        <div class="converter-input">
+          <label for="from-unit">From</label>
+          <select id="from-unit">
+            <option value="meters">Meters</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="centimeters">Centimeters</option>
+            <option value="millimeters">Millimeters</option>
+            <option value="miles">Miles</option>
+            <option value="yards">Yards</option>
+            <option value="feet">Feet</option>
+            <option value="inches">Inches</option>
+          </select>
+        </div>
+
+        <div class="converter-input">
+          <label for="to-unit">To</label>
+          <select id="to-unit">
+            <option value="meters">Meters</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="centimeters">Centimeters</option>
+            <option value="millimeters">Millimeters</option>
+            <option value="miles">Miles</option>
+            <option value="yards">Yards</option>
+            <option value="feet">Feet</option>
+            <option value="inches">Inches</option>
+          </select>
+        </div>
+
+        <div class="converter-result">
+          <p>Result:</p>
+          <output id="result">--</output>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Toasty Utilities</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
