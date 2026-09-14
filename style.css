@@ -250,3 +250,49 @@ footer {
   font-size: 1.5rem;
   color: var(--ivory);
 }
+
+#swap-button {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 20px;
+  padding: 0;
+
+  background-color: var(--aqua);
+  border: none;
+  border-radius: 6px;
+
+  color: var(--dark-onyx);
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+#swap-button:hover {
+  background-color: var(--mint);
+}
+
+#copy-button {
+    width: 42px;
+    height: 42px;
+
+    margin-top: 12px;
+
+    padding: 0;
+
+    background-color: var(--aqua);
+    border: none;
+    border-radius: 6px;
+
+    color: var(--dark-onyx);
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#copy-button:hover {
+    background-color: var(--mint);
+}

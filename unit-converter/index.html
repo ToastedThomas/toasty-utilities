@@ -53,8 +53,15 @@
             <option value="yards">Yards</option>
             <option value="feet">Feet</option>
             <option value="inches">Inches</option>
+            <option value="fathoms">Fathoms</option>
+            <option value="nauticalMiles">Nautical Miles</option>
+            <option value="chains">Chains</option>
+            <option value="rods">Rods</option>
+            <option value="earthRadius">Earth Radius (Mean)</option>
           </select>
         </div>
+
+        <button type="button" id="swap-button" aria-label="Swap units">⇅</button>
 
         <div class="converter-input">
           <label for="to-unit">To</label>
@@ -67,12 +74,19 @@
             <option value="yards">Yards</option>
             <option value="feet">Feet</option>
             <option value="inches">Inches</option>
+            <option value="fathoms">Fathoms</option>
+            <option value="nauticalMiles">Nautical Miles</option>
+            <option value="chains">Chains</option>
+            <option value="rods">Rods</option>
+            <option value="earthRadius">Earth Radius (Mean)</option>
           </select>
         </div>
 
         <div class="converter-result">
           <p>Result:</p>
           <output id="result">--</output>
+
+          <button type="button" id="copy-button" aria-label="Copy result">⧉</button>
         </div>
 
       </div>

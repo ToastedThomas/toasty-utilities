@@ -2,6 +2,8 @@ const fromValue = document.getElementById("from-value");
 const fromUnit = document.getElementById("from-unit");
 const toUnit = document.getElementById("to-unit");
 const result = document.getElementById("result");
+const swapButton = document.getElementById("swap-button");
+const copyButton = document.getElementById("copy-button");
 
 const units = {
   meters: 1,
@@ -11,7 +13,12 @@ const units = {
   miles: 1609.344,
   yards: 0.9144,
   feet: 0.3048,
-  inches: 0.0254
+  inches: 0.0254,
+  fathoms: 1.8288,
+  nauticalMiles: 1852,
+  chains: 20.1168,
+  rods: 5.0292,
+  earthRadius: 6371008
 }
 // meters is the base unit for this dictionary
 // so, 1 inch = 0.0254 meters
@@ -70,3 +77,30 @@ function convertUnits() {
 fromValue.addEventListener("input", convertUnits);
 fromUnit.addEventListener("change", convertUnits);
 toUnit.addEventListener("change", convertUnits);
+
+function swapUnits() {
+  const currentFromUnit = fromUnit.value;
+
+  fromUnit.value = toUnit.value;
+  toUnit.value = currentFromUnit;
+
+  convertUnits();
+}
+
+swapButton.addEventListener("click", swapUnits);
+
+async function copyResult() {
+  if (result.textContent === "--" || result.textContent.startsWith("Please")) {
+    return;
+  }
+
+  await navigator.clipboard.writeText(result.textContent);
+
+  copyButton.textContent = "✔";
+
+  setTimeout(() => {
+    copyButton.textContent = "⧉";
+  }, 1500);
+}
+
+copyButton.addEventListener("click", copyResult);
