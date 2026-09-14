@@ -191,6 +191,10 @@ footer {
   main {
     padding: 30px 16px;
   }
+
+  .date-input-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -299,11 +303,12 @@ footer {
   background-color: var(--mint);
 }
 
-#copy-button {
+#copy-button, .copy {
     width: 42px;
     height: 42px;
 
     margin-top: 12px;
+    margin-bottom: 12px;
 
     padding: 0;
 
@@ -319,6 +324,24 @@ footer {
     cursor: pointer;
 }
 
-#copy-button:hover {
+#copy-button:hover, .copy:hover {
     background-color: var(--mint);
+}
+
+.current-time {
+  display: grid;
+}
+#current-timestamp {
+  font-size: 3rem;
+}
+#current-timestamp,
+#current-system-time {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.date-input-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }

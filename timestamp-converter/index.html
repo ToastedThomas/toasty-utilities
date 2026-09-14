@@ -34,6 +34,26 @@
     </section>
 
     <section>
+      <h2>Current Time</h2>
+
+      <div class="converter current-time">
+
+        <p>Seconds since January 1st, 1970 UTC</p>
+        <div class="converter-result">
+          <output class="result" id="current-timestamp">--</output>
+
+          <button class="copy" type="button" id="copy-current-timestamp" aria-label="Copy current Unix timestamp">⧉</button>
+        </div>
+
+        <div class="converter-result">
+          <p>Current System Time:</p>
+          <output class="result" id="current-system-time">--</output>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
       <h2>Unix Timestamp</h2>
 
       <div class="converter">
@@ -55,16 +75,53 @@
     <section>
       <h2>Date and Time</h2>
 
+      <p>Enter a date and time using your system's local timezone.</p>
+
       <div class="converter">
 
-        <div class="converter-input">
-          <label for="date-time">Date and Time (System local time)</label>
-          <input type="datetime-local" id="date-time">
+        <div class="date-input-grid">
+
+          <div class="converter-input">
+            <label for="date-year">Year</label>
+            <input type="number" id="date-year" min="1" max="275760" placeholder="YYYY">
+          </div>
+
+          <div class="converter-input">
+            <label for="date-month">Month</label>
+            <input type="number" id="date-month" min="1" max="12" placeholder="MM">
+          </div>
+
+          <div class="converter-input">
+            <label for="date-day">Day</label>
+            <input type="number" id="date-day" min="1" max="31" placeholder="DD">
+          </div>
+
+          <div class="converter-input">
+            <label for="date-hour">Hour (24 hour)</label>
+            <input type="number" id="date-hour" min="0" max="23" placeholder="HH">
+          </div>
+
+          <div class="converter-input">
+            <label for="date-minutes">Minutes</label>
+            <input type="number" id="date-minutes" min="0" max="59" placeholder="MM">
+          </div>
+
+          <div class="converter-input">
+            <label for="date-seconds">Seconds</label>
+            <input type="number" id="date-seconds" min="0" max="59" placeholder="SS">
+          </div>
+
         </div>
 
         <div class="converter-result">
           <p>Unix Timestamp:</p>
           <output class="result" id="date-result">--</output>
+
+          <button class="copy" type="button" id="copy-date-result" aria-label="Copy converted Unix timestamp">⧉</button>
+
+          <output class="result" id="date-utc">--</output>
+
+          <output class="result" id="date-local">--</output>
         </div>
 
       </div>
