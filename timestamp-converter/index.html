@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Timestamp Converter - Toasty Utilities</title>
+  <title>Unix Timestamp Converter - Free Online Tools | Toasty Utilities</title>
 
   <meta
     name="description"
-    content="Convert Unix timestamps into readable dates and times easily with Toasty Utilities."
+    content="A live display of the current Unix timestamp. Convert Unix timestamps to local and UTC dates, or convert a date and time into a Unix timestamp with this free online tool."
   >
 
   <link rel="stylesheet" href="../style.css">
@@ -30,7 +30,15 @@
     <section>
       <h2>Timestamp Converter</h2>
 
-      <p>Convert Unix timestamps into readable dates and times.</p>
+      <p>
+        Convert Unix timestamps into readable dates and times, or convert
+        a date and time into a Unix timestamp.
+      </p>
+
+      <p>
+        This free timestamp converter supports both system local time and UTC/GMT.
+        It also includes a live Unix timestamp display with current system time.
+      </p>
     </section>
 
     <section>
@@ -124,6 +132,142 @@
           <output class="result" id="date-local">--</output>
         </div>
 
+      </div>
+    </section>
+
+    <section>
+      <h2>What Is a Unix Timestamp?</h2>
+
+      <p>
+        A Unix timestamp is the number of seconds that have passed since
+        January 1, 1970, at 00:00:00 UTC. This starting point is known as
+        the Unix epoch.
+      </p>
+
+      <p>
+        Unix timestamps provide a simple way to represent a specific moment
+        in time as a number. Instead of storing a date such as
+        <strong>January 1, 2026, 12:00:00 AM</strong>, software can store a
+        single numeric value representing that moment.
+      </p>
+
+      <h3>The Unix Epoch</h3>
+
+      <p>
+        The Unix epoch is the reference point from which Unix timestamps are
+        calculated. A timestamp of <strong>0</strong> represents the beginning
+        of the Unix epoch, while positive timestamps represent moments after it.
+        Dates before the epoch can be represented using negative timestamps.
+      </p>
+
+      <h3>Timestamps and Timezones</h3>
+
+      <p>
+        A Unix timestamp represents a specific moment in time rather than a
+        particular timezone. The same timestamp can therefore be displayed as
+        different clock times depending on the timezone being used. 
+      </p>
+
+      <p>
+        For example, a timestamp representing midnight UTC will appear as a
+        different local time for someone in another timezone. The timestamp
+        itself does not change, only the way that moment is displayed changes.
+      </p>
+
+      <h3>Common Uses for Unix Timestamps</h3>
+
+      <p>
+        Unix timestamps are useful whenever software needs to record or compare
+        exact points in time. They are commonly found in web development,
+        programming, databases, APIs, and system logs.
+      </p>
+    </section>
+
+    <section>
+      <h2>How To Use This Timestamp Converter</h2>
+
+      <h3>Converting a Unix Timestamp into a Date</h3>
+
+      <ol>
+        <li>Enter a Unix timestamp into the Unix Timestamp field.</li>
+        <li>The results will diplay the converted date and time in UTC.</li>
+        <li>The results will also display the same moment in your system's local timezone.</li>
+      </ol>
+
+      <h3>Converting a Date into a Unix Timestamp</h3>
+
+      <ol>
+        <li>Enter the year, month, day, hour, minutes, and seconds in the labeled fields.</li>
+        <li>The date and time will be interpreted using your system's local timezone.</li>
+        <li>The results will display the resulting Unix timestamp.</li>
+        <li>The results will also display the date in both UTC and local time.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Unix Timestamp Examples</h2>
+
+      <div class="example-grid">
+
+        <div class="example-card">
+          <h3>Unix epoch</h3>
+
+          <p>
+            <strong>Timestamp:</strong> 0
+          </p>
+
+          <p>
+            <strong>Date:</strong> January 1, 1970, 00:00:00 UTC
+          </p>
+        </div>
+
+        <div class="example-card">
+          <h3>One minute after the epoch</h3>
+
+          <p>
+            <strong>Timestamp:</strong> 60
+          </p>
+
+          <p>
+            <strong>Date:</strong> January 1, 1970, 00:01:00 UTC
+          </p>
+        </div>
+
+        <div class="example-card">
+          <h3>One day after the epoch</h3>
+
+          <p>
+            <strong>Timestamp:</strong> 86400
+          </p>
+
+          <p>
+            <strong>Date:</strong> January 2, 1970, 00:00:00 UTC
+          </p>
+        </div>
+
+        <div class="example-card">
+          <h3>Unix Pi</h3>
+
+          <p>
+            <strong>Timestamp:</strong> 3141592653
+          </p>
+
+          <p>
+            <strong>Date:</strong> July 21, 2069, 00:37:33 UTC
+          </p>
+        </div>
+
+        <div class="example-card">
+          <h3>Unix billenium</h3>
+
+          <p>
+            <strong>Timestamp:</strong> 1000000000
+          </p>
+
+          <p>
+            <strong>Date:</strong> September 9, 2001, 01:46:40 UTC
+          </p>
+        </div>
       </div>
     </section>
 
