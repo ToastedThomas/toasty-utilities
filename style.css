@@ -352,3 +352,21 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
+
+.color-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#color-picker {
+  width: 64px;
+  height: 64px;
+  padding: 3px;
+
+  border: 1px solid var(--iron-grey);
+  border-radius: 6px;
+
+  background: none;
+  cursor: pointer;
+}

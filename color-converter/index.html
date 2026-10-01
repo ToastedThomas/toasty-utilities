@@ -30,7 +30,21 @@
     <section>
       <h2>Color Converter</h2>
 
-      <p>Convert colors between HEX and RGB formats.</p>
+      <p>
+        Convert colors between HEX and RGB formats, or choose a color using
+        the color picker.
+      </p>
+    </section>
+
+    <section>
+      <h2>Color Picker</h2>
+
+      <div class="converter color-picker">
+        <div class="converter-input">
+          <label for="color-picker">Choose a color</label>
+          <input type="color" id="color-picker" value="#FF5C5C">
+        </div>
+      </div>
     </section>
 
     <section>
@@ -46,6 +60,7 @@
         <div class="converter-result">
           <p>Result:</p>
           <output class="result" id="hex-result">--</output>
+          <button class="copy" type="button" id="copy-rgb" aria-label="Copy RGB value">⧉</button>
         </div>
 
       </div>
@@ -65,6 +80,7 @@
         <div class="converter-result">
           <p>Result:</p>
           <output class="result" id="rgb-result">--</output>
+          <button class="copy" type="button" id="copy-hex" aria-label="Copy HEX value">⧉</button>
         </div>
 
       </div>
